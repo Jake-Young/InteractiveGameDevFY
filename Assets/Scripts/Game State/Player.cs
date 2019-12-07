@@ -1,14 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     #region Private Variables
-
-    private float m_PlayerHealth;
-    private bool m_IsAlive;
+    // Player State
+    private float m_PlayerHealth = 100.0f;
+    private bool m_IsAlive = true;
+    [SerializeField] private Slider m_PlayerHealthSlider;
+    [SerializeField] private float m_MinimumDistanceBetweenDroplets = 10.0f;
+    // Player Level State
     private int m_PlayerHighScore;
+    #endregion
+
+    #region Public Variables
+
+    public Transform[] m_HealthMonitors = new Transform[9];
 
     #endregion
 
@@ -31,5 +40,20 @@ public class Player : MonoBehaviour
         get { return m_PlayerHighScore; }
         set { m_PlayerHighScore = value; } 
     }
+
+    public float MinimumDistance
+    {
+        get { return m_MinimumDistanceBetweenDroplets; }
+    }
+    #endregion
+
+    #region Function
+
+    private void FixedUpdate()
+    {
+        //Debug.Log($"Health: {m_PlayerHealth}");
+        m_PlayerHealthSlider.value = m_PlayerHealth;
+    }
+
     #endregion
 }
