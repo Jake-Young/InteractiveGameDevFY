@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3166347195330691667}
   - component: {fileID: 3166347195330691666}
   - component: {fileID: 306215584918684680}
+  - component: {fileID: 6289607126670827006}
   m_Layer: 9
   m_Name: Liquid Particle (8)
   m_TagString: Untagged
@@ -134,7 +135,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
+--- !u!114 &6289607126670827006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347195330691664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347195370836164
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
 --- !u!1 &3166347195646876951
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
 --- !u!1 &3166347195727076587
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
 --- !u!1 &3166347195841931275
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
 --- !u!1 &3166347196167919119
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
 --- !u!1 &3166347196256955974
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
 --- !u!1 &3166347196299870921
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1013,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a6518f5d1d32943857dd7ea2a61ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PlayerHealthSlider: {fileID: 0}
+  m_MinimumDistanceBetweenDroplets: 10
+  m_HealthMonitors:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &3166347197034519381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10
 --- !u!1 &3166347197333718204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,4 +1294,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
-  coef: 0.2
+  m_DropletHealth: 10

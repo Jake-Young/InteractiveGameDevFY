@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Achievments : MonoBehaviour
+public class Achievements : MonoBehaviour
 {
 
     #region Private Variables

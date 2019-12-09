@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private float m_PlayerHealth = 100.0f;
     private bool m_IsAlive = true;
     [SerializeField] private Slider m_PlayerHealthSlider;
-    [SerializeField] private float m_MinimumDistanceBetweenDroplets = 10.0f;
+    [SerializeField] private float m_MinimumDistanceBetweenDroplets = 3.0f;
     // Player Level State
     private int m_PlayerHighScore;
     #endregion

@@ -6,18 +6,15 @@ using UnityEngine.UI;
 public class HealthMonitor : MonoBehaviour
 {
     #region Private Variables
-
     [SerializeField] private Slider m_HealthSlider;
     [SerializeField] private Player m_Player;
     [SerializeField] private float m_DropletHealth = 10;
     private bool m_TakeawayHealth = false;
-
+    private float m_Distance = Mathf.Infinity;
     #endregion
 
     #region Getters and Setters
-
     // Getters and Setters
-
     #endregion
 
     #region Functions
@@ -29,15 +26,17 @@ public class HealthMonitor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Debug.Log(GetClosestEnemy(m_Player.m_HealthMonitors));
+        GetClosestDroplet(m_Player.m_HealthMonitors);
 
-        if (GetClosestDroplet(m_Player.m_HealthMonitors) >= m_Player.MinimumDistance && m_TakeawayHealth == false)
+        Debug.Log(m_Distance);
+
+        if (m_Distance >= m_Player.MinimumDistance && m_TakeawayHealth == false)
         {
             m_TakeawayHealth = true;
             Debug.Log("Takeaway");
             m_Player.PlayerHealth -= m_DropletHealth;
         }
-        else if (GetClosestDroplet(m_Player.m_HealthMonitors) <= m_Player.MinimumDistance && m_TakeawayHealth == true)
+        else if (m_Distance <= m_Player.MinimumDistance && m_TakeawayHealth == true)
         {
             m_TakeawayHealth = false;
             Debug.Log("Don't");
@@ -45,24 +44,19 @@ public class HealthMonitor : MonoBehaviour
         }
     }
 
-    private float GetClosestDroplet(Transform[] enemies)
+    private void GetClosestDroplet(Transform[] droplets)
     {
-        Transform tMin = null;
-        float minDist = Mathf.Infinity;
-        Vector3 currentPos = transform.position;
-        foreach (Transform t in enemies)
+        Vector3 position = transform.position;
+ 
+        foreach (var droplet in droplets)
         {
-            float dist = Vector3.Distance(t.position, currentPos);
-            if (dist < minDist)
+            float curDistance = Vector3.Distance(droplet.transform.position, position);
+            if (curDistance < m_Distance)
             {
-                tMin = t;
-                minDist = dist;
+                m_Distance = curDistance; 
             }
         }
-        //Debug.Log(minDist);
-        return minDist;
     }
-
 
     #endregion
 

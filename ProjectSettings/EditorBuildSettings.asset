@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Droplet_MainMenu.unity
+    guid: 053252e9ce779754296d7a4a5867490b
+  - enabled: 1
+    path: Assets/Scenes/Droplet_Level1.unity
+    guid: 4b269d4fb156c884bb6449ed2c34245d
+  - enabled: 1
+    path: Assets/Scenes/Droplet_Settings.unity
+    guid: da8a8487ac75c0c4ca02113d7fd2dca7
+  - enabled: 1
+    path: Assets/Scenes/Droplet_Store.unity
+    guid: f55072016a081074ea16e77860338a57
   m_configObjects: {}
