@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 3166347195370836167}
   - component: {fileID: 3166347195370836166}
   - component: {fileID: 8022918554809774534}
+  - component: {fileID: 8471725482451912277}
   m_Layer: 9
   m_Name: Liquid Particle (3)
   m_TagString: Untagged
@@ -286,6 +287,21 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &8471725482451912277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347195370836164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347195646876951
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +315,7 @@ GameObject:
   - component: {fileID: 3166347195646876954}
   - component: {fileID: 3166347195646876953}
   - component: {fileID: 3046369041436001623}
+  - component: {fileID: 6764659315134804765}
   m_Layer: 9
   m_Name: Liquid Particle (5)
   m_TagString: Untagged
@@ -421,6 +438,21 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &6764659315134804765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347195646876951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347195727076587
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +466,7 @@ GameObject:
   - component: {fileID: 3166347195727076590}
   - component: {fileID: 3166347195727076589}
   - component: {fileID: 6495226676410901103}
+  - component: {fileID: 2837766023876890473}
   m_Layer: 9
   m_Name: Liquid Particle (4)
   m_TagString: Untagged
@@ -556,6 +589,21 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &2837766023876890473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347195727076587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347195841931275
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +617,7 @@ GameObject:
   - component: {fileID: 3166347195841931278}
   - component: {fileID: 3166347195841931277}
   - component: {fileID: 7137205317809460848}
+  - component: {fileID: 8787930009223925573}
   m_Layer: 9
   m_Name: Liquid Particle (1)
   m_TagString: Untagged
@@ -691,6 +740,21 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &8787930009223925573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347195841931275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347196167919119
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +768,7 @@ GameObject:
   - component: {fileID: 3166347196167919154}
   - component: {fileID: 3166347196167919153}
   - component: {fileID: 8340946330784362841}
+  - component: {fileID: 2931882192456124948}
   m_Layer: 9
   m_Name: Liquid Particle (6)
   m_TagString: Untagged
@@ -826,6 +891,21 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &2931882192456124948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347196167919119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347196256955974
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +919,7 @@ GameObject:
   - component: {fileID: 3166347196256955977}
   - component: {fileID: 3166347196256955976}
   - component: {fileID: 5981125155131391920}
+  - component: {fileID: 5136797112380438069}
   m_Layer: 9
   m_Name: Liquid Particle (2)
   m_TagString: Untagged
@@ -961,6 +1042,21 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &5136797112380438069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347196256955974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347196299870921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1134,7 @@ GameObject:
   - component: {fileID: 3166347197034519385}
   - component: {fileID: 3166347197034519384}
   - component: {fileID: 4744373462945707184}
+  - component: {fileID: 8632185503429331700}
   m_Layer: 9
   m_Name: Liquid Particle
   m_TagString: Untagged
@@ -1160,6 +1257,21 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &8632185503429331700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347197034519381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}
 --- !u!1 &3166347197333718204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1285,7 @@ GameObject:
   - component: {fileID: 3166347197333718207}
   - component: {fileID: 3166347197333718206}
   - component: {fileID: 6217243154694898110}
+  - component: {fileID: 1945097867373987004}
   m_Layer: 9
   m_Name: Liquid Particle (7)
   m_TagString: Untagged
@@ -1295,3 +1408,18 @@ MonoBehaviour:
   m_HealthSlider: {fileID: 0}
   m_Player: {fileID: 0}
   m_DropletHealth: 10
+--- !u!114 &1945097867373987004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166347197333718204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee7b3491c6471b419846c512f8fe52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIControlMoveSpeed: 15
+  m_TiltMoveSpeed: 20
+  m_GameSettings: {fileID: 0}

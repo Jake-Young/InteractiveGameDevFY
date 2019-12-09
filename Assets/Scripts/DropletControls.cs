@@ -19,6 +19,7 @@ public class DropletControls : MonoBehaviour {
 
     void Start() {
         m_DropletRigidBody = GetComponent<Rigidbody2D>();
+        m_GameSettings = GameObject.FindGameObjectWithTag("GameState").GetComponent<Settings>();
     }
 
     void FixedUpdate()
