@@ -26,37 +26,41 @@ public class HealthMonitor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        GetClosestDroplet(m_Player.m_HealthMonitors);
+        //GetClosestDroplet(m_Player.m_HealthMonitors);
 
-        Debug.Log(m_Distance);
+        //Debug.Log(m_Distance);
 
-        if (m_Distance >= m_Player.MinimumDistance && m_TakeawayHealth == false)
-        {
-            m_TakeawayHealth = true;
-            Debug.Log("Takeaway");
-            m_Player.PlayerHealth -= m_DropletHealth;
-        }
-        else if (m_Distance <= m_Player.MinimumDistance && m_TakeawayHealth == true)
-        {
-            m_TakeawayHealth = false;
-            Debug.Log("Don't");
-            m_Player.PlayerHealth += m_DropletHealth;
-        }
+        //if (m_Distance >= m_Player.MinimumDistance && m_TakeawayHealth == false)
+        //{
+        //    m_TakeawayHealth = true;
+        //    Debug.Log("Takeaway");
+        //    m_Player.PlayerHealth -= m_DropletHealth;
+        //}
+        //else if (m_Distance <= m_Player.MinimumDistance && m_TakeawayHealth == true)
+        //{
+        //    m_TakeawayHealth = false;
+        //    Debug.Log("Don't");
+        //    m_Player.PlayerHealth += m_DropletHealth;
+        //}
     }
 
-    private void GetClosestDroplet(Transform[] droplets)
+    public GameObject GetClosestEnemy(GameObject[] droplets)
     {
-        Vector3 position = transform.position;
- 
-        foreach (var droplet in droplets)
+        GameObject tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+        foreach (GameObject droplet in droplets)
         {
-            float curDistance = Vector3.Distance(droplet.transform.position, position);
-            if (curDistance < m_Distance)
+            float dist = Vector3.Distance(droplet.transform.position, currentPos);
+            if (dist < minDist)
             {
-                m_Distance = curDistance; 
+                tMin = droplet;
+                minDist = dist;
             }
         }
+        return tMin;
     }
+
 
     #endregion
 

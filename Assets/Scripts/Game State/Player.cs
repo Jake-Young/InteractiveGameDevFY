@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     #region Public Variables
 
-    public Transform[] m_HealthMonitors = new Transform[9];
+    public GameObject[] m_HealthMonitors = new GameObject[9];
 
     #endregion
 
