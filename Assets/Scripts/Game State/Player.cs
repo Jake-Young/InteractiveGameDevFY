@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         //Debug.Log($"Health: {m_PlayerHealth}");
-        m_PlayerHealthSlider.value = m_PlayerHealth;
+        //m_PlayerHealthSlider.value = m_PlayerHealth;
     }
 
     #endregion

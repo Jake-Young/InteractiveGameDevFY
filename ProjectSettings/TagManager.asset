@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameState
+  - Checkpoint
+  - Droplet
   layers:
   - Default
   - TransparentFX

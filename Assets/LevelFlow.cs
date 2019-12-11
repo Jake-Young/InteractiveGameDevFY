@@ -1,31 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
+using Michsky.UI.ModernUIPack;
 
 public class LevelFlow : MonoBehaviour
 {
     [SerializeField] private Camera m_PlayerCam;
     [SerializeField] private Player m_Player;
+    [SerializeField] private GameState m_GameState;
     [SerializeField] private CinemachineTargetGroup m_TargetGroup;
+    [SerializeField] private Slider m_Slider;
+    [SerializeField] private EndGame m_EndGameObject;
+    [SerializeField] private GameObject m_EndGamePanel;
 
     private int m_CurrentTargetFocus;
     private int m_PreviousTargetFocus = 0;
 
+    private void Start()
+    {
+        StartCoroutine(DecreaseSlider(m_Slider));
+        m_GameState = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameState>();
+    }
+
+    private void Update()
+    {
+        if (m_GameState.IsGameOver)
+        {
+            StopCoroutine(DecreaseSlider(m_Slider));
+        }
+
+        if (m_Slider.value == 0 && m_GameState.IsGameOver == false)
+        {
+            m_EndGameObject.StopGame(m_EndGamePanel);
+            m_GameState.IsGameOver = true;
+        }
+    }
+
     private void FixedUpdate()
     {
-        //Transform lowestObject = FindLowestDroplet(m_Player.m_HealthMonitors);
-        //float playerCamX = m_PlayerCam.transform.position.x;
-        //float playerCamZ = m_PlayerCam.transform.position.z;
-
-        //m_PlayerCam.transform.position = new Vector3(lowestObject.position.x, lowestObject.position.y, playerCamZ);
-
         m_CurrentTargetFocus = FindLowestDroplet(m_Player.m_HealthMonitors);
         m_TargetGroup.m_Targets[m_CurrentTargetFocus].weight = 20;
 
         if (m_PreviousTargetFocus != m_CurrentTargetFocus)
         {
-            m_TargetGroup.m_Targets[m_PreviousTargetFocus].weight = 1;
+            m_TargetGroup.m_Targets[m_PreviousTargetFocus].weight = 0;
             m_PreviousTargetFocus = m_CurrentTargetFocus;
         }
     }
@@ -43,7 +63,23 @@ public class LevelFlow : MonoBehaviour
                 lowestObject = droplets[arrayPos].transform;
             }
         }
-        Debug.Log(chosenArrayPosistion);
         return chosenArrayPosistion;
     }
+
+    private IEnumerator DecreaseSlider(Slider slider)
+    {
+        if (slider != null)
+        {
+            float timeSlice = 1;
+            while (slider.value >= 0)
+            {
+                slider.value -= timeSlice;
+                yield return new WaitForSeconds(1);
+                if (slider.value <= 0)
+                    break;
+            }
+        }
+        yield return null;
+    }
+
 }

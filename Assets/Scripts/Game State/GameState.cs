@@ -28,4 +28,12 @@ public class GameState : MonoBehaviour
 
     #endregion
 
+    #region
+    private void Awake()
+    {
+        m_IsGameOver = false;
+    }
+
+    #endregion
+
 }

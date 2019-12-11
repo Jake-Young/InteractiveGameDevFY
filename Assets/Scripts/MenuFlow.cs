@@ -27,4 +27,9 @@ public class MenuFlow : MonoBehaviour
     {
         SceneManager.LoadScene((int)m_LoadedScenes.MainMenu);
     }
+
+    public void OnRetryClick()
+    {
+        SceneManager.LoadScene((int)m_LoadedScenes.Level_1);
+    }
 }
