@@ -45,11 +45,11 @@ public class SettingsFlow : MonoBehaviour
         }
         else if (m_Settings.SelectedControlScheme == 1)
         {
-            m_ControlSchemeText.text = "Button";
+            m_ControlSchemeText.text = "Slider";
         }
         else if (m_Settings.SelectedControlScheme == 2)
         {
-            m_ControlSchemeText.text = "Slider";
+            m_ControlSchemeText.text = "Button";
         }
 
     }
