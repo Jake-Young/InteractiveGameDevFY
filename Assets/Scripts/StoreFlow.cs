@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class StoreFlow : MonoBehaviour
 {
@@ -15,29 +16,34 @@ public class StoreFlow : MonoBehaviour
         m_Store = GameObject.FindGameObjectWithTag("GameState").GetComponent<Store>();
         //m_PreviousSkin = 3;
         CheckActiveCharacterSkin();
+        Analytics.CustomEvent("Game started");
     }
 
     public void OnBlueClick()
     {
         m_Store.ActiveCharacterSkin = 0;
+        Analytics.CustomEvent("Blue Skin");
         CheckActiveCharacterSkin();
     }
 
     public void OnRedClick()
     {
         m_Store.ActiveCharacterSkin = 1;
+        Analytics.CustomEvent("Red Skin");
         CheckActiveCharacterSkin();
     }
 
     public void OnGreenClick()
     {
         m_Store.ActiveCharacterSkin = 2;
+        Analytics.CustomEvent("Green Skin");
         CheckActiveCharacterSkin();
     }
 
     public void OnPurpleClick()
     {
         m_Store.ActiveCharacterSkin = 3;
+        Analytics.CustomEvent("Purple Skin");
         CheckActiveCharacterSkin();
     }
 
